@@ -1,5 +1,5 @@
 <?php
-require("vendor/autoload.php");  // Si usas Composer
+require("/vendor/autoload.php");  // Si usas Composer
 
 use Bluerhinos\phpMQTT;
 
