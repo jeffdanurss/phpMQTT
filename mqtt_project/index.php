@@ -23,5 +23,18 @@
         echo "<p>Mensaje enviado: $message</p>";
     }
     ?>
+    <script>
+    setInterval(function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "get_messages.php", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById("receivedMessages").innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    }, 2000); // Actualiza cada 2 segundos
+    </script>
+
 </body>
 </html>
